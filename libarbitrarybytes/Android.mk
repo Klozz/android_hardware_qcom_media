@@ -2,12 +2,12 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr $(TARGET_OUT_INTERMEDIATES)/kernel/msm-4.14/usr
 
 libarbitrarybytes-def := -Werror
 libarbitrarybytes-def += -D_ANDROID_
 
-libarbitrarybytes-inc  := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+libarbitrarybytes-inc  := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include $(TARGET_OUT_INTERMEDIATES)/kernel/msm-4.14/usr/include
 libarbitrarybytes-inc  += $(LOCAL_PATH)/inc
 libarbitrarybytes-inc  += $(LOCAL_PATH)/../mm-video-v4l2/vidc/common/inc/
 libarbitrarybytes-inc  += $(LOCAL_PATH)/../mm-core/inc

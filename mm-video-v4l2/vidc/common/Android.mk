@@ -23,7 +23,8 @@ libmm-vidc-def += -D_ANDROID_ICS_
 libmm-vidc-inc      := $(LOCAL_PATH)/inc
 libmm-vidc-inc      += $(TOP)/hardware/qcom/media/mm-core/inc
 libmm-vidc-inc      += $(TOP)/hardware/qcom/media/libc2dcolorconvert
-libmm-vidc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+libmm-vidc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include 
+libmm-vidc-inc      += $(TARGET_OUT_INTERMEDIATES)/kernel/msm-4.14/usr/include
 libmm-vidc-inc      += $(TOP)/hardware/libhardware/include
 libmm-vidc-inc      += $(LIBION_HEADER_PATHS)
 
@@ -42,7 +43,8 @@ LOCAL_HEADER_LIBRARIES := \
 LOCAL_SRC_FILES   += src/vidc_common.cpp
 LOCAL_SRC_FILES   += src/vidc_vendor_extensions.cpp
 
-LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr 
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/kernel/msm-4.14/usr
 
 include $(BUILD_STATIC_LIBRARY)
 
